@@ -1,0 +1,90 @@
+
+Ruby intro part 1
+  #sum
+    should be defined
+    returns correct sum [20 points]
+    works on the empty array [10 points]
+  #max_2_sum
+    should be defined (FAILED - 1)
+    returns the correct sum [7 points] (FAILED - 2)
+    works even if 2 largest values are the same [3 points] (FAILED - 3)
+    returns zero if array is empty [10 points]
+    returns value of the element if just one element [10 points]
+  #sum_to_n
+    should be defined
+    returns true when any two elements sum to the second argument [30 points]
+    returns false for any single element array [5 points]
+    returns false for an empty array [5 points]
+
+#hello
+  should be defined
+  The hello method returns the correct string [30 points]
+
+#starts_with_consonant?
+  should be defined
+  classifies true cases [10 points]
+  classifies false cases [10 points]
+  works on the empty string [5 points]
+  works on nonletters [5 points]
+
+#binary_multiple_of_4?
+  should be defined
+  classifies valid binary numbers [30 points]
+  rejects invalid binary numbers [10 points]
+
+BookInStock
+  should be defined
+  getters and setters
+    should set ISBN [10 points]
+    should set price [10 points]
+    should be able to change ISBN [10 points]
+    should be able to change price [10 points]
+  constructor
+    should reject invalid ISBN number [10 points]
+    should reject zero price [10 points]
+    should reject negative price [10 points]
+  #price_as_string
+    should be defined
+    should display 33.95 as "$33.95" [10 points]
+    should display 1.1 as $1.10 [10 points]
+    should display 20 as $20.00 [10 points]
+
+Failures:
+
+  1) Ruby intro part 1 #max_2_sum should be defined
+     Failure/Error: expect { max_2_sum([1, 2, 3]) }.not_to raise_error
+
+       expected no Exception, got #<ArgumentError: comparison of Integer with nil failed> with backtrace:
+         # ./lib/ruby_intro.rb:23:in `>'
+         # ./lib/ruby_intro.rb:23:in `max_2_sum'
+         # ./spec/part1_spec.rb:26:in `block (4 levels) in <top (required)>'
+         # ./spec/part1_spec.rb:26:in `block (3 levels) in <top (required)>'
+     # ./spec/part1_spec.rb:26:in `block (3 levels) in <top (required)>'
+
+  2) Ruby intro part 1 #max_2_sum returns the correct sum [7 points]
+     Failure/Error: if arr[i] > biggest or biggest == nil
+
+     ArgumentError:
+       comparison of Integer with nil failed
+     # ./lib/ruby_intro.rb:23:in `>'
+     # ./lib/ruby_intro.rb:23:in `max_2_sum'
+     # ./spec/part1_spec.rb:29:in `block (3 levels) in <top (required)>'
+
+  3) Ruby intro part 1 #max_2_sum works even if 2 largest values are the same [3 points]
+     Failure/Error: if arr[i] > biggest or biggest == nil
+
+     ArgumentError:
+       comparison of Integer with nil failed
+     # ./lib/ruby_intro.rb:23:in `>'
+     # ./lib/ruby_intro.rb:23:in `max_2_sum'
+     # ./spec/part1_spec.rb:33:in `block (3 levels) in <top (required)>'
+
+Finished in 0.02048 seconds (files took 0.09359 seconds to load)
+34 examples, 3 failures
+
+Failed examples:
+
+rspec ./spec/part1_spec.rb:25 # Ruby intro part 1 #max_2_sum should be defined
+rspec ./spec/part1_spec.rb:28 # Ruby intro part 1 #max_2_sum returns the correct sum [7 points]
+rspec ./spec/part1_spec.rb:32 # Ruby intro part 1 #max_2_sum works even if 2 largest values are the same [3 points]
+
